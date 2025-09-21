@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hello Codex</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #111827;
+      color: #f9fafb;
+      font-family: system-ui, sans-serif;
+    }
+    h1 { margin-bottom: 1rem; }
+    button {
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      background: #2563eb;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover { background: #1e40af; }
+    #count { margin-top: 1rem; font-size: 1.25rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hello Codex</h1>
+    <button id="btn">Click me</button>
+    <div id="count" aria-live="polite">Count: 0</div>
+  </main>
+  <script>
+    let count = 0;
+    const btn = document.getElementById('btn');
+    const output = document.getElementById('count');
+    btn.onclick = () => {
+      count++;
+      output.textContent = `Count: ${count}`;
+    };
+  </script>
+</body>
+</html>
